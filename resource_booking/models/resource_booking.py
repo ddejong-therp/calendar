@@ -479,7 +479,7 @@ class ResourceBooking(models.Model):
             "combination_id.resource_ids"
         )
         missing_rbc = has_meeting - has_rbc
-        if missing_rbc:
+        if missing_rbc and False:
             raise ValidationError(
                 _(
                     "Cannot schedule these bookings because no resources "
